@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Full Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px">crm</div>
+	<div data-options="region:'west',split:true,title:'West'" style="width:200px;">
+		
+		<div style="padding:10px; border:1px solid #416aa3; cursor: pointer; ">lianjie0</div>
+
+		<div class="easyui-accordion" fit="true" style="">
+			<div title="About" style="overflow:auto; padding:10px; cursor: pointer; ">
+				lianjie1
+			</div>
+		</div>
+	
+	</div>
+
+	<!--
+	<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>
+	-->
+	<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
+	<div data-options="region:'center',title:'Center'">
+	
+	</div>
+
+	<script>
+		$(function(){
+			$(".easyui-accordion").accordion('getSelected').panel('collapse')
+		});
+		 
+	</script>
+
+
+</body>
+</html>
