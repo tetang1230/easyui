@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="./themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="./themes/icon.css">
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./jquery.easyui.min.js"></script>
+
+</head>
+
+<body class="easyui-layout">
+
+
+	<div class="data" style="margin:50px;">
+
+		<div style="float:left;">
+			<table class="easyui-datagrid" title="<?=$day;?>" style="width:700px;height:250px"
+					data-options="singleSelect:true,collapsible:true,url:'./datagrid.json',method:'get'">
+				<thead>
+					<tr>
+						<th data-options="field:'tasktype',width:200">任务类型</th>
+						<th data-options="field:'unprocess',width:150">未处理</th>
+						<th data-options="field:'processing',width:150">处理中</th>
+						<th data-options="field:'closed',width:150">已关闭</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+
+		<div style="margin-left:10px;">
+			<table class="easyui-datagrid" title="<?=$month;?>" style="width:500px;height:250px"
+					data-options="singleSelect:true,collapsible:true,url:'./datagrid.json',method:'get'">
+				<thead>
+					<tr>
+						<th data-options="field:'itemid',width:150">未处理</th>
+						<th data-options="field:'productid',width:150">处理中</th>
+						<th data-options="field:'listprice',width:150">已关闭</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+
+		<div style="clear:both;"></div>
+
+	</div>
+
+</body>
+</html>
